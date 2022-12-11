@@ -13,6 +13,7 @@ struct ToDoList_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             OngoingTaskView()
+                .environment(\.colorScheme, .light)
         }
     }
 }

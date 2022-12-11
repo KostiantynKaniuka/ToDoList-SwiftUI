@@ -10,6 +10,7 @@
 		E75450E129460F8C005BA20D /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75450E029460F8C005BA20D /* NewTaskView.swift */; };
 		E75450E32946310E005BA20D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75450E22946310E005BA20D /* ColorExtension.swift */; };
 		E75450E5294650CA005BA20D /* OngoingTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75450E4294650CA005BA20D /* OngoingTaskCell.swift */; };
+		E75450E829465C90005BA20D /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75450E729465C90005BA20D /* AddTaskButton.swift */; };
 		E7F3C474293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */; };
 		E7F3C476293FF23C00F81E44 /* OngoingTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3C475293FF23C00F81E44 /* OngoingTaskView.swift */; };
 		E7F3C478293FF23D00F81E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F3C477293FF23D00F81E44 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		E75450E029460F8C005BA20D /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		E75450E22946310E005BA20D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		E75450E4294650CA005BA20D /* OngoingTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingTaskCell.swift; sourceTree = "<group>"; };
+		E75450E729465C90005BA20D /* AddTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
 		E7F3C470293FF23C00F81E44 /* ToDoList-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoList-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList_SwiftUIApp.swift; sourceTree = "<group>"; };
 		E7F3C475293FF23C00F81E44 /* OngoingTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingTaskView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E75450E629465C56005BA20D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7F3C475293FF23C00F81E44 /* OngoingTaskView.swift */,
+				E75450E4294650CA005BA20D /* OngoingTaskCell.swift */,
+				E75450E029460F8C005BA20D /* NewTaskView.swift */,
+				E75450E729465C90005BA20D /* AddTaskButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E7F3C467293FF23C00F81E44 = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +72,7 @@
 			children = (
 				E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */,
 				E75450E22946310E005BA20D /* ColorExtension.swift */,
-				E7F3C475293FF23C00F81E44 /* OngoingTaskView.swift */,
-				E75450E4294650CA005BA20D /* OngoingTaskCell.swift */,
-				E75450E029460F8C005BA20D /* NewTaskView.swift */,
+				E75450E629465C56005BA20D /* View */,
 				E7F3C477293FF23D00F81E44 /* Assets.xcassets */,
 				E7F3C479293FF23D00F81E44 /* Preview Content */,
 			);
@@ -148,6 +159,7 @@
 			files = (
 				E7F3C476293FF23C00F81E44 /* OngoingTaskView.swift in Sources */,
 				E7F3C474293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift in Sources */,
+				E75450E829465C90005BA20D /* AddTaskButton.swift in Sources */,
 				E75450E5294650CA005BA20D /* OngoingTaskCell.swift in Sources */,
 				E75450E129460F8C005BA20D /* NewTaskView.swift in Sources */,
 				E75450E32946310E005BA20D /* ColorExtension.swift in Sources */,
