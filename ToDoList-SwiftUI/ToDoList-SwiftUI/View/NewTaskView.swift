@@ -8,53 +8,50 @@
 import SwiftUI
 
 struct NewTaskView: View {
+    //@Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(\.dismiss) var dismiss
     @State private var newTaskName: String = ""
+    var calendarAction: () -> Void
     var body: some View {
-        ZStack {
-            Color(UIColor.AddNewTaskScreenColor)
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                Spacer()
-                VStack {
-                    TextField(
-                        "Enter new task",
-                        text: $newTaskName
-                    ).padding(20)
-                        .textFieldStyle(.roundedBorder)
-                    HStack(alignment: .center, spacing: 60) {
-                        //save task button
-                        Button(action: okk) {
-                            Text("Save")
-                                .foregroundColor(.white)
-                        }.buttonStyle(.borderedProminent)
+        VStack {
+            Spacer()
+            VStack {
+                TextField("Enter the task", text: $newTaskName)
+                    .frame(width: 300, height: 40)
+                    .textFieldStyle(.plain)
+                    .padding(.horizontal)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black, lineWidth: 2)
+                        
+                    )
+                    .padding()
+                    .background(Color.white)
+                
+                HStack(alignment: .center, spacing: 60) {
+                    //save task button
+                    Button(action: { dismiss()}) {
+                        Text("Save")
+                            .foregroundColor(.white)
+                    }.buttonStyle(.borderedProminent)
+                        .tint(.black)
+                        .padding(.leading, 20)
+                        .padding(.bottom, 10)
+                    
+                    //deadlinelabel
+                    Text("Select eadline>")
+                        .font(Font.custom("San Francisco", size: 17))
+                        .foregroundColor(.gray)
+                    
+                    //calendarButton
+                    Button(action: calendarAction) {
+                        Image(systemName: "calendar")
                             .tint(.black)
-                            .padding(.leading, 20)
-                            .padding(.bottom, 10)
-                        //deadlinelabel
-                        Text("Select eadline>")
-                            .font(Font.custom("San Francisco", size: 17))
-                        //calendarButton
-                        Button(action: okk) {
-                            Image(systemName: "calendar")
-                                .tint(.black)
-                        }
                     }
                 }
-                .background(Color.white)
-                .frame(height: 100, alignment: .leading)
             }
+            .background(Color.white)
+            .frame(height: 100, alignment: .leading)
         }
-    }}
-    
-    
-
-
-struct NewTaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewTaskView()
     }
-}
- 
-func okk() {
-    //
 }

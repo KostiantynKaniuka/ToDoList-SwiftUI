@@ -44,9 +44,9 @@
 			isa = PBXGroup;
 			children = (
 				E7F3C475293FF23C00F81E44 /* OngoingTaskView.swift */,
+				E75450E729465C90005BA20D /* AddTaskButton.swift */,
 				E75450E4294650CA005BA20D /* OngoingTaskCell.swift */,
 				E75450E029460F8C005BA20D /* NewTaskView.swift */,
-				E75450E729465C90005BA20D /* AddTaskButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
