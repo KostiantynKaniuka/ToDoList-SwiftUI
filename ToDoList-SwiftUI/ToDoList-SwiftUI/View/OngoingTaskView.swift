@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OngoingTaskView: View {
-    @State private var showingSheet = false
+    @State private var showNewTaskForm = false
     @State private var sample = [
         "lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek"
     ]
@@ -16,7 +16,6 @@ struct OngoingTaskView: View {
         NavigationStack {
             ZStack {
                 VStack {
-                    
                     List {
                         ForEach(sample, id: \.self) { task in
                             HStack {
@@ -26,11 +25,17 @@ struct OngoingTaskView: View {
                         .listRowBackground(Color(.appBackground))
                     }
                     Spacer()
-                    AddTaskButton(action: {
-                        showingSheet.toggle()
-                    })
-                }.sheet(isPresented: $showingSheet) {
-                NewTaskView()
+                    ZStack {
+                        AddTaskButton(action: {
+                                showNewTaskForm.toggle()
+                        })
+                        if self.showNewTaskForm {
+                            NewTaskView(calendarAction: blanc)
+                            
+                                  } else {
+                                      NewTaskView(calendarAction: blanc).hidden()
+                                  }
+                    }.fixedSize()
                 }
             }
             .padding(.top)
@@ -38,7 +43,8 @@ struct OngoingTaskView: View {
             .scrollContentBackground(.hidden)
             .background( Color(.appBackground))
         }
-    }}
+    }
+}
 
 
 
@@ -46,4 +52,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         OngoingTaskView()
     }
+}
+func blanc() {
+   //
 }
