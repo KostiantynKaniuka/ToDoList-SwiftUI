@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct NewTaskView: View {
-    @Environment(\.dismiss) var dismiss
     @FocusState private var textFieldIsFocused: Bool
     @State private var newTaskName: String = ""
     var calendarAction: () -> Void
+    var saveButtonAction: () -> Void
     var body: some View {
         ZStack {
             VStack {
@@ -31,7 +31,7 @@ struct NewTaskView: View {
                     //MARK: - Save and Calendar buttons
                     HStack(spacing: 60) {
                         //save task button
-                        Button(action: { dismiss()}) {
+                        Button(action: saveButtonAction) {
                             Text("Save")
                         }.buttonStyle(.borderedProminent)
                             .tint(.black)

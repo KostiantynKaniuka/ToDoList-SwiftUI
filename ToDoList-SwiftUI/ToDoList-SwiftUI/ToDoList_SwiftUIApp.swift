@@ -12,7 +12,7 @@ import SwiftUI
 struct ToDoList_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            OngoingTaskView()
+            ToDoListView()
                 .environment(\.colorScheme, .light)
         }
     }
