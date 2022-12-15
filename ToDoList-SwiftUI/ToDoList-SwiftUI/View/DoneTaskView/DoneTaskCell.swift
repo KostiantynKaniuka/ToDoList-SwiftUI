@@ -10,7 +10,7 @@ import SwiftUI
 struct DoneTaskCell: View {
     @State  var taskName: String
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             Button(action: ok) {
                 Label("", systemImage: "checkmark.seal.fill")
                     .foregroundColor(.green)

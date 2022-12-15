@@ -10,7 +10,7 @@ import SwiftUI
 struct ToDoListView: View {
     @State private var selectedView: MenuSection = .ongoing
     @State private var showNewTaskForm = false
-
+    
     var body: some View {
         VStack(spacing: 0) {
             Picker("", selection: $selectedView) {
@@ -28,23 +28,30 @@ struct ToDoListView: View {
                     case .done:
                         DoneTaskView()
                     }
-                    VStack {
-                        Spacer()
-                        ZStack {
-                            AddTaskButton(action: {
-                                showNewTaskForm.toggle()
-                            })
-                            if self.showNewTaskForm {
-                                NewTaskView(calendarAction: blanc, saveButtonAction: dismiss)
-                            } else {
-                                NewTaskView(calendarAction: blanc, saveButtonAction: blanc).hidden()
-                            }
-                        }.fixedSize()
-                    }
                 }
+                .frame(width: 400)
                 .navigationTitle("Tasks")
                 .scrollContentBackground(.hidden)
                 .background( Color(.appBackground))
+            }
+            if self.showNewTaskForm {
+                ZStack {
+                    AddTaskButton(action: {
+                        showNewTaskForm.toggle()
+                    })
+                    NewTaskView(calendarAction: blanc, saveButtonAction: dismiss)
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(height: 100)
+            } else {
+                ZStack {
+                    AddTaskButton(action: {
+                        showNewTaskForm.toggle()
+                    })
+                    NewTaskView(calendarAction: blanc, saveButtonAction: blanc).hidden()
+                }
+                .fixedSize()
+                .frame(height: 50)
             }
         }
         .padding()
@@ -57,11 +64,11 @@ struct ToDoListView: View {
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.white], for: .normal)
         UISegmentedControl.appearance().backgroundColor = .black
     }
-        
-        private func dismiss() {
-            showNewTaskForm.toggle()
-        }
+    
+    private func dismiss() {
+        showNewTaskForm.toggle()
     }
+}
 
 
 struct ContentView_Previews: PreviewProvider {
@@ -70,5 +77,5 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 func blanc() {
-   //
+    //
 }

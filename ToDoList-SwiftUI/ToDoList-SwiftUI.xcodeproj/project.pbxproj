@@ -66,6 +66,13 @@
 			path = DoneTaskView;
 			sourceTree = "<group>";
 		};
+		E747FE26294BBDE700D99050 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E75450E629465C56005BA20D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +104,7 @@
 		E7F3C472293FF23C00F81E44 /* ToDoList-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E747FE26294BBDE700D99050 /* ViewModel */,
 				E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */,
 				E75450E22946310E005BA20D /* ColorExtension.swift */,
 				E75450E629465C56005BA20D /* View */,

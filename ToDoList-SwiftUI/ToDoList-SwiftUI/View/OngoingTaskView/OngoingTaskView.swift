@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OngoingTaskView: View {
-    var selectedState: MenuSection = .ongoing
     @State private var sample = [
         "lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek"
         ]

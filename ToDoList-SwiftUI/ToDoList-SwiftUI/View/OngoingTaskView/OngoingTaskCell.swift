@@ -11,7 +11,7 @@ struct OngoingTaskCell: View {
     @State  var taskName: String
     
     var body: some View {
-        HStack {
+        HStack (spacing: 0) {
             //done button
             Button(action: ok) {
                 Label("", systemImage: "circle.circle")

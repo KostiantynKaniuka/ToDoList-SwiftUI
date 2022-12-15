@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DoneTaskView: View {
-    var selectedState: MenuSection = .done
     @State private var sample = [
         "lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek"
         ]
