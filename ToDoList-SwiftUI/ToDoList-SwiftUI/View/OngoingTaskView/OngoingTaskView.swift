@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct OngoingTaskView: View {
-    @State private var sample = [
-        "lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek", "Okaay","lol", "kek"
-        ]
-   
+    @EnvironmentObject var realmManager: RealmManager
     var body: some View {
         List {
-            ForEach(sample, id: \.self) { task in
+            ForEach(realmManager.tasks, id: \._id) { task in
                 HStack {
-                    OngoingTaskCell(taskName: task)
+                    OngoingTaskCell(taskName: task.title)
                 }
+            }
+            .onAppear{
+                UITableView().backgroundColor = .appBackground
             }
             .listRowBackground(Color(.appBackground))
         }

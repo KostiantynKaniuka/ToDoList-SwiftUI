@@ -77,6 +77,7 @@
 		E747FE26294BBDE700D99050 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E75450E22946310E005BA20D /* ColorExtension.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,11 +123,10 @@
 		E7F3C472293FF23C00F81E44 /* ToDoList-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				E7599462294CEBC700CA6BF1 /* Model */,
-				E747FE26294BBDE700D99050 /* ViewModel */,
 				E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */,
-				E75450E22946310E005BA20D /* ColorExtension.swift */,
+				E7599462294CEBC700CA6BF1 /* Model */,
 				E75450E629465C56005BA20D /* View */,
+				E747FE26294BBDE700D99050 /* ViewModel */,
 				E7F3C477293FF23D00F81E44 /* Assets.xcassets */,
 				E7F3C479293FF23D00F81E44 /* Preview Content */,
 			);
