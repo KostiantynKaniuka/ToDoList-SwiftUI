@@ -24,11 +24,3 @@ struct AddTaskButton: View {
         }
     }
 }
-
-//struct AddTaskButton_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        AddTaskButton()
-//    }
-//}
-

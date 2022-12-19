@@ -11,6 +11,7 @@ struct NewTaskView: View {
     @EnvironmentObject var realmManager: RealmManager
     @FocusState private var textFieldIsFocused: Bool
     @State private var newTaskName: String = ""
+    
     var calendarAction: () -> Void
     var dismissView: () -> Void
     var body: some View {
@@ -38,10 +39,12 @@ struct NewTaskView: View {
                             dismissView()
                         }) {
                             Text("Save")
-                        }.buttonStyle(.borderedProminent)
-                            .tint(.black)
-                            .padding(.leading, 20)
-                            .padding(.bottom, 10)
+                        }
+                        .disabled(newTaskName.isEmpty)
+                        .buttonStyle(.borderedProminent)
+                        .tint(.black)
+                        .padding(.leading, 20)
+                        .padding(.bottom, 10)
                         //deadlinelabel
                         Text("Select eadline>")
                             .font(Font.custom("San Francisco", size: 17))

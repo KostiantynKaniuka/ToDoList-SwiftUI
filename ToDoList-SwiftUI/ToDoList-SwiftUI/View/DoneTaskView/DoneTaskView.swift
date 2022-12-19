@@ -18,6 +18,14 @@ struct DoneTaskView: View {
             List {
                 ForEach(doneTasks, id: \._id) { task in
                         DoneTaskCell(taskName: task.title)
+                        .swipeActions {
+                            Button {
+                                realmManager.deleteTask(id: task._id)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.red)
+                        }
                 }
                 .onAppear{
                     UITableView().backgroundColor = .appBackground

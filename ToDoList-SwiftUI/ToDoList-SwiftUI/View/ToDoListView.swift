@@ -76,13 +76,13 @@ struct ToDoListView: View {
     }
 }
 
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ToDoListView()
             .environmentObject(RealmManager())
     }
 }
+
 func blanc() {
     print(Realm.Configuration.defaultConfiguration.fileURL!)
 }

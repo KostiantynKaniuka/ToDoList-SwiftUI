@@ -21,8 +21,16 @@ struct OngoingTaskView: View {
                     OngoingTaskCell(taskName: task.title, doneButtonTapped: {
                         realmManager.updateTask(id: task._id, completed: true, date: Date())
                     })
+                    .swipeActions {
+                        Button {
+                            realmManager.deleteTask(id: task._id)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                        .tint(.red)
+                    }
                 }
-                .onAppear{
+                .onAppear {
                     UITableView().backgroundColor = .appBackground
                 }
                 .listRowBackground(Color(.appBackground))
