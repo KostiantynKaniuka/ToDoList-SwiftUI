@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ToDoListView: View {
     @StateObject var realmManager = RealmManager()
@@ -83,5 +84,5 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 func blanc() {
-    //
+    print(Realm.Configuration.defaultConfiguration.fileURL!)
 }

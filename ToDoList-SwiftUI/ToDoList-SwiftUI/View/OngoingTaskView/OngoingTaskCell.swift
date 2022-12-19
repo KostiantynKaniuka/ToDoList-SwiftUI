@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct OngoingTaskCell: View {
+    @EnvironmentObject var realmManager: RealmManager
     @State  var taskName: String
+    var doneButtonTapped: () -> Void
     
     var body: some View {
         HStack (spacing: 0) {
             //done button
-            Button(action: ok) {
+            Button(action: doneButtonTapped) {
                 Label("", systemImage: "circle.circle")
             }
             //task name label
@@ -21,14 +23,4 @@ struct OngoingTaskCell: View {
                 .font(Font.custom("San Fransico", size: 17))
         }
     }
-}
-
-struct OngoingTaskCell_Previews: PreviewProvider {
-    static var previews: some View {
-        OngoingTaskCell(taskName: "Task Name")
-    }
-}
-
-func ok() {
-//
 }

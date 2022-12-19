@@ -6,26 +6,27 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct OngoingTaskView: View {
     @EnvironmentObject var realmManager: RealmManager
+    @ObservedResults(Task.self,where: ( { $0.completed == false } )) var newTasks
+    
     var body: some View {
-        List {
-            ForEach(realmManager.tasks, id: \._id) { task in
-                HStack {
-                    OngoingTaskCell(taskName: task.title)
+        if newTasks.isEmpty {
+            Color.appBackground
+        } else {
+            List {
+                ForEach(newTasks, id: \._id) { task in
+                    OngoingTaskCell(taskName: task.title, doneButtonTapped: {
+                        realmManager.updateTask(id: task._id, completed: true, date: Date())
+                    })
                 }
+                .onAppear{
+                    UITableView().backgroundColor = .appBackground
+                }
+                .listRowBackground(Color(.appBackground))
             }
-            .onAppear{
-                UITableView().backgroundColor = .appBackground
-            }
-            .listRowBackground(Color(.appBackground))
         }
     }
 }
-
-//struct OngoingTaskView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OngoingTaskView(selectedState: .ongoing)
-//    }
-//}

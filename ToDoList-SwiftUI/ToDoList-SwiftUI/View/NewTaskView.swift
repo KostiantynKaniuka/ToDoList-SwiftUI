@@ -19,7 +19,7 @@ struct NewTaskView: View {
                 Spacer()
                 VStack {
                     //MARK: - TextField
-                    TextField("Enter the task", text: $newTaskName)
+                    TextField("Enter the task", text: $newTaskName, onCommit: dismissView)
                         .focused($textFieldIsFocused)
                         .frame(width: 300, height: 40)
                         .textFieldStyle(.plain)
@@ -27,7 +27,8 @@ struct NewTaskView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color.black, lineWidth: 2)
-                        ).padding()
+                        )
+                        .padding()
                         .background(Color(.white))
                     //MARK: - Save and Calendar buttons
                     HStack(spacing: 60) {
