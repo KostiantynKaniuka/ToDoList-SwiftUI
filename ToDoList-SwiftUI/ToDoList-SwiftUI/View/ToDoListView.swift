@@ -49,7 +49,7 @@ struct ToDoListView: View {
                     AddTaskButton(action: {
                         showNewTaskForm.toggle()
                     })
-                    NewTaskView(calendarAction: blanc, dismissView: dismiss)
+                    NewTaskView(dismissView: dismiss)
                         .environmentObject(realmManager)
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -59,7 +59,7 @@ struct ToDoListView: View {
                     AddTaskButton(action: {
                         showNewTaskForm.toggle()
                     })
-                    NewTaskView(calendarAction: blanc, dismissView: dismiss)
+                    NewTaskView(dismissView: dismiss)
                         .environmentObject(realmManager)
                         .hidden()
                 }

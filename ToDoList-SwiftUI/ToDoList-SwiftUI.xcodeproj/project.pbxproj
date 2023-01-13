@@ -19,6 +19,7 @@
 		E7599464294CEBE600CA6BF1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7599463294CEBE600CA6BF1 /* RealmManager.swift */; };
 		E7599466294CEC3700CA6BF1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7599465294CEC3700CA6BF1 /* Task.swift */; };
 		E7883132294B811F00FC2BC3 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7883131294B811F00FC2BC3 /* MenuSection.swift */; };
+		E7BC27362971A3CD0075174C /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC27352971A3CD0075174C /* DateView.swift */; };
 		E7F3C474293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */; };
 		E7F3C476293FF23C00F81E44 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3C475293FF23C00F81E44 /* ToDoListView.swift */; };
 		E7F3C478293FF23D00F81E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F3C477293FF23D00F81E44 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		E7599463294CEBE600CA6BF1 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		E7599465294CEC3700CA6BF1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E7883131294B811F00FC2BC3 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		E7BC27352971A3CD0075174C /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		E7F3C470293FF23C00F81E44 /* ToDoList-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoList-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F3C473293FF23C00F81E44 /* ToDoList_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList_SwiftUIApp.swift; sourceTree = "<group>"; };
 		E7F3C475293FF23C00F81E44 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				E71676252948803E00F6D4A8 /* OngoingTaskView */,
 				E75450E729465C90005BA20D /* AddTaskButton.swift */,
 				E75450E029460F8C005BA20D /* NewTaskView.swift */,
+				E7BC27352971A3CD0075174C /* DateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7883132294B811F00FC2BC3 /* MenuSection.swift in Sources */,
+				E7BC27362971A3CD0075174C /* DateView.swift in Sources */,
 				E7F3C476293FF23C00F81E44 /* ToDoListView.swift in Sources */,
 				E7599464294CEBE600CA6BF1 /* RealmManager.swift in Sources */,
 				E71676272948806100F6D4A8 /* DoneTaskView.swift in Sources */,
